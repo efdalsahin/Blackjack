@@ -1,0 +1,51 @@
+/* Complete the CSS styling according to the provided design */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-image: url("/images/table.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  width: 50%;
+  height: 60%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+  color: white;
+}
+.container .content {
+  margin: 20px;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  color: goldenrod;
+}
+
+#message-el {
+  font-style: italic;
+}
+
+.start-btn {
+  background: goldenrod;
+  width: 150px;
+  color: #016f32;
+  border: none;
+  border-radius: 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
