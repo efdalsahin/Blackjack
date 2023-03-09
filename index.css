@@ -22,13 +22,21 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    font-size: 40px;
     font-weight: bold;
     color: white;
 }
 .container .content {
-    margin: 20px;
+    margin: 7px;
     align-items: center;
+}
+
+.other {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid black;
 }
 
 h1 {
@@ -56,4 +64,11 @@ button {
 .buttons {
     display: flex;
     flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+    /* For tablets: */
+    body {
+        background: white;
+    }
 }

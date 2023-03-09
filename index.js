@@ -1,3 +1,7 @@
+let player = {
+    name: "Player",
+    chips: 200,
+};
 let cards = [];
 let sum = 0;
 let hasBlackJack = false;
@@ -7,6 +11,9 @@ let message = "";
 let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
+let playerEl = document.getElementById("player-el");
+
+playerEl.textContent = player.name + ": $" + player.chips;
 
 function getRandomCard() {
     let random = Math.floor(Math.random() * 13) + 1;
@@ -20,6 +27,7 @@ function getRandomCard() {
 }
 
 function startGame() {
+    isAlive = true;
     let firstCard = getRandomCard();
     let secondCard = getRandomCard();
     cards.push(firstCard);
@@ -50,12 +58,13 @@ function renderGame() {
 }
 
 function newCard() {
-    console.log("Drawing a new card from the deck!");
-    let card = getRandomCard();
-    sum += card;
+    if (isAlive && !hasBlackJack) {
+        let card = getRandomCard();
+        sum += card;
 
-    cards.push(card);
+        cards.push(card);
 
-    console.log(cards);
-    renderGame();
+        console.log(cards);
+        renderGame();
+    }
 }
