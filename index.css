@@ -14,9 +14,6 @@ body {
     align-items: center;
     color: white;
 }
-.mobil {
-    visibility: hidden;
-}
 
 .container {
     display: flex;
@@ -77,20 +74,4 @@ button {
 .buttons {
     display: flex;
     justify-content: space-evenly;
-}
-
-@media only screen and (min-width: 600px) {
-    /* For tablets: */
-    .container {
-        width: 100%;
-        font-size: 60;
-    }
-
-    .title {
-        background-image: url(/images/cards.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position-y: 100px;
-        height: 390px;
-    }
 }
