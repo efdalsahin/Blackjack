@@ -14,11 +14,14 @@ body {
     align-items: center;
     color: white;
 }
+.mobil {
+    visibility: hidden;
+}
 
 .container {
     display: flex;
     width: 50%;
-    height: 60%;
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -36,12 +39,24 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: solid black;
+    border: solid goldenrod 15px;
+    border-style: ridge;
+    padding: 20px;
+}
+
+.title {
+    background-image: url(/images/cards.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 70px;
+    height: 250px;
 }
 
 h1 {
     margin: 0;
     color: goldenrod;
+    text-decoration: overline;
+    text-decoration: underline;
 }
 
 #message-el {
@@ -50,25 +65,32 @@ h1 {
 
 button {
     background: goldenrod;
-    width: 150px;
+
     color: #016f32;
     border: none;
     border-radius: 2px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 10px;
     font-weight: bold;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin: 5px;
 }
 
 .buttons {
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
     /* For tablets: */
-    body {
-        background: white;
+    .container {
+        width: 100%;
+        font-size: 60;
+    }
+
+    .title {
+        background-image: url(/images/cards.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: 100px;
+        height: 390px;
     }
 }
