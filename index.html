@@ -1,12 +1,13 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="index.css">
 </head>
 
-<body>
-
+<body id="body">
+    <div class="img"></div>
 
     <div class="container">
         <div class="title">
@@ -19,7 +20,7 @@
         </div>
 
         <div class="other">
-            <div class="content">
+            <div class="content" style="text-align: center;">
                 <p id="message-el">Want to play a round?</p>
             </div>
 
@@ -31,8 +32,8 @@
                 <p id="sum-el">Sum:</p>
             </div>
             <div class="buttons">
-                <button onclick="startGame()">START GAME</button>
-                <button onclick="newCard()">NEW CARD</button>
+                <button id="start-btn" onclick="startGame()">START GAME</button>
+                <button id="newcard-btn" onclick="newCard()">NEW CARD</button>
             </div>
             <div class="content">
                 <p id="player-el"></p>

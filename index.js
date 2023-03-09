@@ -2,6 +2,7 @@ let player = {
     name: "Player",
     chips: 200,
 };
+
 let cards = [];
 let sum = 0;
 let hasBlackJack = false;
@@ -12,6 +13,8 @@ let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 let playerEl = document.getElementById("player-el");
+let startBtn = document.getElementById("start-btn");
+let newCardBtn = document.getElementById("newcard-btn");
 
 playerEl.textContent = player.name + ": $" + player.chips;
 
@@ -49,11 +52,27 @@ function renderGame() {
     } else if (sum === 21) {
         message = "You've got Blackjack!! ";
         hasBlackJack = true;
+        isAlive = false;
+        playerEl.textContent = player.name + ": $" + player.chips * 2;
     } else {
         message = "You're out of the game! ";
         isAlive = false;
+        playerEl.textContent = player.name + ": $" + player.chips * 0;
     }
+    if (isAlive) {
+        startBtn.disabled = true;
+    } else {
+        startBtn.disabled = true;
+        newCardBtn.disabled = true;
 
+        let elem = document.createElement("span");
+        elem.innerHTML =
+            '<button id="tryAgain-btn" onclick="window.location.reload()" >Try Again</button>';
+        elem.style.position = "absolute";
+        elem.style.bottom = "0";
+
+        body.appendChild(elem);
+    }
     messageEl.textContent = message;
 }
 

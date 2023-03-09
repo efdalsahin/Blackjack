@@ -38,6 +38,7 @@ body {
     align-items: center;
     border: solid goldenrod 15px;
     border-style: ridge;
+    width: 80%;
     padding: 20px;
 }
 
@@ -68,10 +69,79 @@ button {
     border-radius: 2px;
     padding: 10px;
     font-weight: bold;
+    font-size: 40px;
     margin: 5px;
 }
 
 .buttons {
     display: flex;
     justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 1000px) {
+    /* For tablets: */
+
+    .img {
+        background-image: url(/images/chips.png);
+
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+    .container {
+        width: 85%;
+        font-size: 50px;
+    }
+
+    button {
+        font-size: 50px;
+    }
+
+    .other {
+        background-image: url("/images/table.png");
+    }
+
+    .title {
+        background-image: url(/images/cards.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: 110px;
+        height: 350px;
+    }
+
+    h1 {
+        font-size: 100px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    /* For tablets: */
+
+    .container {
+        width: 85%;
+        font-size: 20px;
+    }
+
+    .other {
+        background-image: url("/images/table.png");
+    }
+    button {
+        font-size: 20px;
+    }
+
+    .title {
+        background-image: url(/images/cards.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: 52px;
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
 }
